@@ -461,35 +461,41 @@
     }
 
     @media (max-width: 720px) {
-      .section {
-        padding: 70px 0;
-      }
+  .section {
+    padding: 70px 0;
+  }
 
-      .nav-links {
-        display: none;
-      }
+  .nav-links {
+    display: none;
+  }
 
-      .pricing-grid {
-        grid-template-columns: 1fr;
-      }
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
 
-      .hero {
-        min-height: auto;
-      }
+  .hero {
+    min-height: auto;
+  }
 
-      .hero-content {
-        padding: 72px 0 88px;
-      }
+  .hero-content {
+    padding: 72px 0 88px;
+  }
 
-            .intro-card,
-      .price-card,
-      .service-card,
-      .why-card,
-      .contact-card,
-      .cta-box {
-        padding: 22px;
-      }
-    }
+  .intro-card,
+  .price-card,
+  .service-card,
+  .why-card,
+  .contact-card,
+  .cta-box {
+    padding: 22px;
+  }
+}
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 32px;
   .package-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -608,6 +614,7 @@
   .vehicle-pricing-grid {
     grid-template-columns: 1fr;
   }
+}
   </style>
 </head>
 <body>
