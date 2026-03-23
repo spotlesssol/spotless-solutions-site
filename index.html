@@ -3,110 +3,126 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>Spotless Solutions | Premium Mobile Detailing</title>
 
 <style>
 :root {
-  --bg: #05070b;
-  --card: rgba(255,255,255,0.05);
-  --card-border: rgba(255,255,255,0.12);
-  --text: #f5f7fb;
-  --muted: #a8b0c0;
-  --accent: #3b82f6;
-  --shadow: 0 20px 60px rgba(0,0,0,0.45);
+  --bg:#05070b;
+  --card:rgba(255,255,255,0.05);
+  --border:rgba(255,255,255,0.12);
+  --text:#f5f7fb;
+  --muted:#a8b0c0;
+  --accent:#3b82f6;
+  --accent2:#60a5fa;
 }
 
-body {
+body{
   margin:0;
-  font-family: system-ui;
-  color: var(--text);
-  background: linear-gradient(180deg,#020305,#05070b);
+  font-family:system-ui;
+  background:linear-gradient(#020305,#05070b);
+  color:var(--text);
 }
 
-.container {
-  width: min(1100px, 90%);
+.container{
+  width:min(1100px,90%);
   margin:auto;
 }
 
-.section { padding:80px 0; }
+.section{padding:80px 0;}
 
-h1 { font-size:48px; }
-h2 { font-size:34px; }
+h1{font-size:48px;}
+h2{font-size:34px;}
 
-.btn {
-  padding:14px 20px;
+.btn{
+  padding:14px 22px;
   border-radius:999px;
   font-weight:700;
 }
 
-.btn-primary {
-  background: linear-gradient(135deg,#3b82f6,#60a5fa);
-  color:white;
+.btn-primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
 }
 
-.card {
-  background: var(--card);
-  border:1px solid var(--card-border);
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
   border-radius:20px;
 }
 
 /* HERO */
-.hero {
-  padding:100px 0;
+.hero{
+  padding:120px 0;
 }
 
-/* PACKAGES */
-.package-grid {
+/* GRID */
+.grid-3{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
 }
 
-.package-card {
-  padding:25px;
-  border-radius:20px;
-  border:2px solid var(--card-border);
+/* PACKAGE SECTION */
+.package-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin-top:30px;
 }
 
-.package-card h3 {
+.package-card{
+  padding:30px;
+  border-radius:24px;
+  border:2px solid var(--border);
+}
+
+.package-card h3{
   font-size:28px;
 }
 
-.package-card.bronze { border-color:#c8832b; }
-.package-card.silver { border-color:#bfc4cc; }
-.package-card.gold { border-color:#f1cc21; }
+.package-card.bronze{border-color:#c8832b;}
+.package-card.silver{border-color:#bfc4cc;}
+.package-card.gold{border-color:#f1cc21;}
 
-.package-card.gold h3 { color:#ffdd1f; }
+.package-card.gold h3{color:#ffdd1f;}
 
-.package-list li { margin-bottom:10px; }
+.package-list li{margin-bottom:10px;}
+
+/* DIVIDER */
+.divider{
+  height:1px;
+  background:rgba(255,255,255,0.1);
+  margin:50px 0;
+}
 
 /* VEHICLE PRICING */
-.vehicle-grid {
+.vehicle-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:20px;
 }
 
-.vehicle-card {
+.vehicle-card{
   padding:25px;
 }
 
-.vehicle-title {
-  color:#ffdd1f;
+.vehicle-title{
   text-align:center;
+  color:#ffdd1f;
 }
 
-.vehicle-row {
+.vehicle-row{
   display:flex;
   justify-content:space-between;
-  padding:12px 0;
+  padding:14px 0;
   border-top:1px solid rgba(255,255,255,0.1);
 }
 
 /* MOBILE */
 @media(max-width:900px){
+  .grid-3,
   .package-grid,
-  .vehicle-grid {
+  .vehicle-grid{
     grid-template-columns:1fr;
   }
 }
@@ -116,87 +132,92 @@ h2 { font-size:34px; }
 <body>
 
 <!-- HERO -->
-<section class="hero container">
-  <h1>Premium Mobile Detailing in Albuquerque</h1>
-  <p>We come to you. Fast booking. Premium results.</p>
+<section class="hero">
+<div class="container">
+<h1>Premium Mobile Detailing in Albuquerque</h1>
+<p>Fast booking. Premium results. We come to you.</p>
 
-  <a class="btn btn-primary" href="https://app.squareup.com/appointments/book/xxuidnn7r993jy/LZA11427KGB3P/start">
-    Book Now
-  </a>
+<a class="btn btn-primary" href="https://app.squareup.com/appointments/book/xxuidnn7r993jy/LZA11427KGB3P/start">
+Book Now
+</a>
+</div>
 </section>
 
 <!-- PRICING -->
-<section class="section container">
-  <h2>Pick Your Package in 30 Seconds</h2>
-  <p>Most customers choose Full Detail for best results.</p>
+<section class="section">
+<div class="container">
 
-  <div class="package-grid">
+<h2>Choose Your Service</h2>
+<p>Most customers choose Full Detail for best results.</p>
 
-    <div class="package-card bronze card">
-      <h3>Exterior Only</h3>
-      <ul class="package-list">
-        <li>Hand wash</li>
-        <li>Wheels & tires</li>
-        <li>Windows</li>
-      </ul>
-    </div>
+<div class="package-grid">
 
-    <div class="package-card silver card">
-      <h3>Interior Only</h3>
-      <ul class="package-list">
-        <li>Vacuum</li>
-        <li>Wipe down</li>
-        <li>Deep clean</li>
-      </ul>
-    </div>
+<div class="package-card bronze card">
+<h3>Exterior Only</h3>
+<ul class="package-list">
+<li>Hand wash</li>
+<li>Wheel cleaning</li>
+<li>Window clean</li>
+</ul>
+</div>
 
-    <div class="package-card gold card">
-      <h3>Full Detail</h3>
-      <ul class="package-list">
-        <li>Interior + exterior</li>
-        <li>Best results</li>
-        <li>Most popular</li>
-      </ul>
-    </div>
+<div class="package-card silver card">
+<h3>Interior Only</h3>
+<ul class="package-list">
+<li>Vacuum</li>
+<li>Wipe down</li>
+<li>Deep clean</li>
+</ul>
+</div>
 
-  </div>
+<div class="package-card gold card">
+<h3>Full Detail</h3>
+<ul class="package-list">
+<li>Interior + exterior</li>
+<li>Best results</li>
+<li>Most popular</li>
+</ul>
+</div>
 
-  <br><br>
+</div>
 
-  <h2>Individual Pricing</h2>
+<div class="divider"></div>
 
-  <div class="vehicle-grid">
+<h2>Vehicle Pricing</h2>
 
-    <div class="vehicle-card card">
-      <h3 class="vehicle-title">Sedan</h3>
-      <div class="vehicle-row"><span>Full</span><strong>$200</strong></div>
-      <div class="vehicle-row"><span>Interior</span><strong>$150</strong></div>
-      <div class="vehicle-row"><span>Exterior</span><strong>$65</strong></div>
-    </div>
+<div class="vehicle-grid">
 
-    <div class="vehicle-card card">
-      <h3 class="vehicle-title">SUV</h3>
-      <div class="vehicle-row"><span>Full</span><strong>$250</strong></div>
-      <div class="vehicle-row"><span>Interior</span><strong>$200</strong></div>
-      <div class="vehicle-row"><span>Exterior</span><strong>$75</strong></div>
-    </div>
+<div class="vehicle-card card">
+<h3 class="vehicle-title">Sedan</h3>
+<div class="vehicle-row"><span>Full</span><strong>$200</strong></div>
+<div class="vehicle-row"><span>Interior</span><strong>$150</strong></div>
+<div class="vehicle-row"><span>Exterior</span><strong>$65</strong></div>
+</div>
 
-    <div class="vehicle-card card">
-      <h3 class="vehicle-title">Coupe</h3>
-      <div class="vehicle-row"><span>Full</span><strong>$185</strong></div>
-      <div class="vehicle-row"><span>Interior</span><strong>$140</strong></div>
-      <div class="vehicle-row"><span>Exterior</span><strong>$60</strong></div>
-    </div>
+<div class="vehicle-card card">
+<h3 class="vehicle-title">SUV</h3>
+<div class="vehicle-row"><span>Full</span><strong>$250</strong></div>
+<div class="vehicle-row"><span>Interior</span><strong>$200</strong></div>
+<div class="vehicle-row"><span>Exterior</span><strong>$75</strong></div>
+</div>
 
-    <div class="vehicle-card card">
-      <h3 class="vehicle-title">Truck</h3>
-      <div class="vehicle-row"><span>Full</span><strong>$280</strong></div>
-      <div class="vehicle-row"><span>Interior</span><strong>$220</strong></div>
-      <div class="vehicle-row"><span>Exterior</span><strong>$75</strong></div>
-    </div>
+<div class="vehicle-card card">
+<h3 class="vehicle-title">Coupe</h3>
+<div class="vehicle-row"><span>Full</span><strong>$185</strong></div>
+<div class="vehicle-row"><span>Interior</span><strong>$140</strong></div>
+<div class="vehicle-row"><span>Exterior</span><strong>$60</strong></div>
+</div>
 
-  </div>
+<div class="vehicle-card card">
+<h3 class="vehicle-title">Truck</h3>
+<div class="vehicle-row"><span>Full</span><strong>$280</strong></div>
+<div class="vehicle-row"><span>Interior</span><strong>$220</strong></div>
+<div class="vehicle-row"><span>Exterior</span><strong>$75</strong></div>
+</div>
 
+</div>
+
+</div>
 </section>
 
 </body>
