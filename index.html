@@ -490,69 +490,6 @@
         padding: 22px;
       }
     }
-
-    .ba-slider {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-.ba-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.ba-after-wrap {
-  position: absolute;
-  inset: 0;
-  width: 50%;
-  overflow: hidden;
-}
-
-.ba-line {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 2px;
-  background: white;
-  transform: translateX(-50%);
-}
-
-.ba-handle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: black;
-  border: 2px solid white;
-  transform: translate(-50%, -50%);
-}
-
-.ba-range {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  cursor: ew-resize;
-}
-
-.ba-label {
-  position: absolute;
-  top: 10px;
-  color: white;
-  font-weight: bold;
-  background: rgba(0,0,0,0.5);
-  padding: 5px 10px;
-  border-radius: 20px;
-}
-
-.ba-label-left { left: 10px; }
-.ba-label-right { right: 10px; }
   </style>
 </head>
 <body>
@@ -746,45 +683,24 @@
       </div>
     </section>
 
-    <section class="section" id="results">
-  <div class="container">
-    <div class="eyebrow">Results</div>
-    <h2>Before & After</h2>
-    <p class="lead">
-      Real detailing results you can see. Drag the slider to compare the transformation.
-    </p>
+          .intro-card,
+      .price-card,
+      .service-card,
+      .why-card,
+      .contact-card,
+      .cta-box {
+        padding: 22px;
+      }
+    }
 
-    <div class="ba-wrap card" style="margin-top:32px; padding:24px;">
-      <div class="ba-slider" id="beforeAfterSlider">
-        <img src="before.jpg" alt="Before detailing" class="ba-img ba-before" />
-
-        <div class="ba-after-wrap" id="afterWrap">
-          <img src="after.jpg" alt="After detailing" class="ba-img ba-after" />
-        </div>
-
-        <div class="ba-line" id="baLine"></div>
-        <div class="ba-handle" id="baHandle"></div>
-
-        <input
-          type="range"
-          min="0"
-          max="100"
-          value="50"
-          class="ba-range"
-          id="baRange"
-        />
-
-        <div class="ba-label ba-label-left">Before</div>
-        <div class="ba-label ba-label-right">After</div>
-      </div>
-
-      <div class="gallery-caption" style="padding:18px 4px 0;">
-        Drag the slider left or right to reveal the full result.
-      </div>
-    </div>
-  </div>
-</section>
-
+    .ba-slider {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    
     <section class="section">
       <div class="container">
         <div class="eyebrow">Why Spotless Solutions</div>
@@ -869,24 +785,6 @@
       <div>Call or text: <a href="tel:+15055694535">(505) 569-4535</a></div>
     </div>
   </footer>
-<script>
-  const range = document.getElementById('baRange');
-  const afterWrap = document.getElementById('afterWrap');
-  const line = document.getElementById('baLine');
-  const handle = document.getElementById('baHandle');
-
-  function updateSlider(value) {
-    afterWrap.style.width = value + '%';
-    line.style.left = value + '%';
-    handle.style.left = value + '%';
-  }
-
-  updateSlider(range.value);
-
-  range.addEventListener('input', function () {
-    updateSlider(this.value);
-  });
-</script>
 
 </body>
 </html>
